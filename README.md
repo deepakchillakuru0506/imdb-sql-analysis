@@ -10,7 +10,7 @@ were the deliverables.
 The dataset models films relationally rather than as a single flat file: a movie table keyed on
 `movie_id`, a genre bridge table (a film can hold several genres, so genre analysis requires a join
 per genre), a ratings table carrying average rating and vote count, and the supporting lookup
-tables. Working against a normalised schema is the point of the exercise — most of the analytical
+tables. Working against a normalized schema is the point of the exercise — most of the analytical
 questions cannot be answered from one table.
 
 An entity-relationship diagram is included in `IMDb_Data_and_ERD.xlsx`.
@@ -21,7 +21,7 @@ An entity-relationship diagram is included in `IMDb_Data_and_ERD.xlsx`.
 
 | Technique | Count | Used for |
 |---|---|---|
-| Joins | 13 | Assembling movie, genre, and rating context across the normalised tables |
+| Joins | 13 | Assembling movie, genre, and rating context across the normalized tables |
 | GROUP BY aggregations | 11 | Genre-level and period-level rollups (film counts, average ratings, vote totals) |
 | Window functions | 5 | Ranking within groups — top films per genre, rating rank against the period average |
 | CTEs | 2 | Staging intermediate results so the ranking question stays readable |
